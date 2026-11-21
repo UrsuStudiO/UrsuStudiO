@@ -185,18 +185,23 @@ export default function Hero({ projects }) {
                 target="_blank"
                 rel="noreferrer"
                 ref={(el) => (cardsRef.current[i] = el)}
-                className="group relative block h-full overflow-hidden border border-[var(--border)]"
+                className="dv-card hx-card group relative block h-full overflow-hidden border border-[var(--border)]"
+                aria-label={`${p.title}: ${p.highlight}. ${t.viewDemo}`}
               >
-                <img
-                  src={p.image}
-                  alt={p.alt}
-                  fetchPriority="high"
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
-                <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-between gap-3">
-                  <p className="text-white text-sm md:text-base font-medium">{p.title}</p>
-                  <p className="hidden md:block text-white/70 text-xs">{p.category}</p>
+                <div className="hx-stage" aria-hidden="true">
+                  <div className="hx-desk">
+                    <div className="dv-screen"><img src={p.shots.scroll} alt="" fetchPriority="high" /></div>
+                    <div className="dv-base" />
+                    <div className="dv-phone dv-side"><img src={p.shots.mobile} alt="" /></div>
+                  </div>
+                  <div className="dv-phone hx-solo"><img src={p.shots.mobile} alt="" fetchPriority="high" /></div>
+                </div>
+                <div className="hx-cap">
+                  <div className="min-w-0">
+                    <p className="font-display font-semibold text-base md:text-xl leading-tight">{p.title}</p>
+                    <p className="hx-hl">{p.highlight}</p>
+                  </div>
+                  <span className="hx-live">{t.viewDemo} ↗</span>
                 </div>
               </a>
             ))}

@@ -6,15 +6,15 @@ const QuoteContext = createContext(null);
 // Abre el formulario de cotización desde cualquier botón:
 // const { openQuote } = useQuote(); openQuote("Dinámica");
 export function QuoteProvider({ children }) {
-  const [state, setState] = useState({ open: false, plan: "" });
+  const [state, setState] = useState({ open: false, plan: "", message: "" });
 
-  const openQuote = useCallback((plan = "") => setState({ open: true, plan }), []);
+  const openQuote = useCallback((plan = "", message = "") => setState({ open: true, plan, message }), []);
   const closeQuote = useCallback(() => setState((s) => ({ ...s, open: false })), []);
 
   return (
     <QuoteContext.Provider value={{ openQuote }}>
       {children}
-      {state.open && <QuoteModal plan={state.plan} onClose={closeQuote} />}
+      {state.open && <QuoteModal plan={state.plan} message={state.message} onClose={closeQuote} />}
     </QuoteContext.Provider>
   );
 }

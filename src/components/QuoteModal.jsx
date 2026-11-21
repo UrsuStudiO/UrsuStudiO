@@ -13,7 +13,7 @@ const field =
 const label = "block text-xs uppercase tracking-wide text-[var(--fg)]/50 font-display";
 
 // Formulario de cotización en una ventana: se envía sin salir de la página.
-export default function QuoteModal({ plan, onClose }) {
+export default function QuoteModal({ plan, message = "", onClose }) {
   const overlayRef = useRef(null);
   const panelRef = useRef(null);
   const firstFieldRef = useRef(null);
@@ -141,6 +141,7 @@ export default function QuoteModal({ plan, onClose }) {
               <span className={label}>{t.quote.message}</span>
               <textarea
                 name="message"
+                defaultValue={message}
                 required
                 rows={4}
                 placeholder={t.quote.messagePh}

@@ -8,6 +8,7 @@ import ProjectsParallax from "./components/ProjectsParallax";
 import About from "./components/About";
 import ProjectsSection from "./components/ProjectsSection";
 import Plans from "./components/Plans";
+import Trust, { WaFloat } from "./components/Trust";
 import Faq from "./components/Faq";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -88,10 +89,12 @@ function Page() {
       </div>
 
       <ProjectsSection projects={projects} />
+      <Trust />
       <Plans />
       <Faq />
       <Contact />
       <Footer />
+      <WaFloat />
     </main>
   );
 }
