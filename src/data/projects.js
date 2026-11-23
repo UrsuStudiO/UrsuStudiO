@@ -31,17 +31,17 @@ const projects = [
   },
   {
     name: "Terra Crema",
-    highlight: { es: "Rutina por momento del día y pedido por WhatsApp", en: "Routine by time of day and WhatsApp orders" },
+    highlight: { es: "Test de piel, pack de las tres y pedido por WhatsApp", en: "Skin quiz, three-pack and WhatsApp orders" },
     category: { es: "Belleza", en: "Beauty" },
     url: "https://terracrema.pages.dev/",
-    keywords: ["cosmetica", "belleza", "cremas", "skincare", "spa", "salon de belleza", "peluqueria", "barberia", "estetica", "maquillaje", "unas", "farmacia", "productos naturales", "dermatologia", "beauty", "cosmetics", "salon", "nails"],
+    keywords: ["cosmetica", "belleza", "cremas", "crema facial", "cuidado de la piel", "skincare", "spa", "salon de belleza", "peluqueria", "barberia", "estetica", "maquillaje", "unas", "farmacia", "productos naturales", "dermatologia", "beauty", "cosmetics", "salon", "nails"],
   },
   {
     name: "Cafe Ritual",
-    highlight: { es: "Horario en vivo: te dice si está abierto ahora", en: "Live hours: tells you if it is open right now" },
+    highlight: { es: "Tienda de café con bolsa, suscripción y pedido por WhatsApp", en: "Coffee shop with a bag, subscription and WhatsApp orders" },
     category: { es: "Gastronomía", en: "Food & drink" },
     url: "https://caferitual.pages.dev/",
-    keywords: ["cafe", "cafeteria", "restaurante", "restaurant", "bar", "panaderia", "pasteleria", "reposteria", "comida", "heladeria", "bistro", "pizzeria", "hamburguesas", "salteñas", "food truck", "coffee", "bakery", "food", "drinks"],
+    keywords: ["cafe", "cafeteria", "tostaduria", "cafe en grano", "cafe de especialidad", "restaurante", "restaurant", "bar", "panaderia", "pasteleria", "reposteria", "comida", "heladeria", "bistro", "pizzeria", "hamburguesas", "salteñas", "food truck", "coffee", "bakery", "food", "drinks"],
   },
   {
     name: "Salon Imperia",
@@ -58,8 +58,8 @@ const METRICS = {
   // Lighthouse 12, perfil PC, builds de producción (20 nov 2026). perf/a11y/seo: 0-100; lcp: segundos.
   altavista: { perf: 99, a11y: 100, seo: 100, lcp: 0.5 },
   bloque: { perf: 98, a11y: 100, seo: 100, lcp: 0.8 },
-  "cafe-ritual": { perf: 96, a11y: 100, seo: 100, lcp: 1.0 },
-  "terra-crema": { perf: 97, a11y: 100, seo: 100, lcp: 1.0 },
+  "cafe-ritual": { perf: 96, a11y: 100, seo: 100, lcp: 1.1 }, // remedido 23 nov 2026 (rediseño)
+  "terra-crema": { perf: 94, a11y: 100, seo: 100, lcp: 1.4 }, // remedido 23 nov 2026 (rediseño)
   "nova-run": { perf: 87, a11y: 96, seo: 100, lcp: 0.8 },
   "salon-imperia": { perf: 59, a11y: 96, seo: 100, lcp: 0.9 },
 };
